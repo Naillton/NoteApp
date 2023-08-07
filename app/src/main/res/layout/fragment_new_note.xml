@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.NewNoteFragment">
+
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floatingButtonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/purpleButton"
+            android:clickable="true"
+            android:contentDescription="@string/float_button"
+            app:icon="@drawable/baseline_done_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewAddNote"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewAddNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@color/white"
+            android:padding="10dp"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:id="@+id/linearAddNote"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="46dp">
+
+                <EditText
+                    android:id="@+id/edtAddNoteTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autofillHints="name"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/enter_your_title_card"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/edtAddNoteBody"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:autofillHints="name"
+                    android:background="@android:color/transparent"
+                    android:ems="10"
+                    android:hint="@string/enter_your_information"
+                    android:inputType="textMultiLine"
+                    android:padding="14dp"
+                    android:textColor="@color/info"
+                    android:textColorHint="@color/info"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
